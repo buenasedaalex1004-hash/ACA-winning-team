@@ -29,9 +29,9 @@ body.page-home {
 body.page-about {
   background: radial-gradient(
     circle at 20% 20%,
-    #a1c4fd 0%,
-    #c2e9fb 45%,
-    #fdfbfb 100%
+    #39d8f8 0%,
+    #1f6d91 45%,
+    #96caf5 100%
   );
 }
 
