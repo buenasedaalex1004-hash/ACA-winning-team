@@ -287,6 +287,9 @@ p {
   max-width: 25vw;
   position: absolute;
   float: right;
+  margin-left: 750px;
+}
+
 .home-form {
   border: 4px ridge var(--nav);
   padding: 16px;
