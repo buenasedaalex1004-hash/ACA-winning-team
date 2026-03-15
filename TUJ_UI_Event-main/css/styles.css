@@ -44,6 +44,7 @@ body {
 
 body.page-home {
   background: var(--bg);
+  background: #020617;
 }
 
 body.page-about {
@@ -70,6 +71,162 @@ body.page-blank {
   background: var(--bg);
 }
 
+.page-image--home
+{
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+}
+
+.page-image--home img
+{
+  width: 100%;
+  border-radius: 20px;
+  font: Inter;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(84, 141, 201, 0.5);
+  color: rgb(0, 234, 255);
+  border: none;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.slider-btn:hover {
+  background: rgba(56, 111, 174, 0.8);
+}
+
+h1 {
+  text-align: left;
+  margin-top: 3rem;
+}
+
+.today-trucks {
+  margin: 3rem auto;
+  max-width: 900px;
+}
+
+.truck-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.truck-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+  text-align: left;
+}
+
+.weekly-schedule {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.schedule-image {
+  max-width: 700px;
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.partners{
+text-align:center;
+margin-top:4rem;
+}
+
+.partner-slider{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:25px;
+margin-top: 40px;
+}
+
+.slider-window{
+width:900px;
+overflow:hidden;
+margin: auto;
+}
+
+.slide-btn{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+
+font-size:28px;
+border:none;
+background:rgba(0,0,0,0.4);
+color:white;
+padding:8px 14px;
+cursor:pointer;
+border-radius:6px;
+}
+
+.slide-btn:first-of-type{
+left:-60px;
+}
+
+.slide-btn:last-of-type{
+right:60px;
+}
+
+.partner-cards{
+display:flex;
+transition:transform 0.4s ease;
+}
+
+.partner-card{
+background:white;
+padding:2.5rem;
+border-radius:14px;
+width:280px;
+margin:0 15px;
+opacity:0.5;
+transform:scale(0.9);
+transition:0.3s;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.partner-card.active{
+opacity:1;
+transform:scale(1.0);
+}
+
+.partner-card img{
+width:90px;
+margin-bottom:1rem;
+}
+
+.slide-btn{
+font-size:28px;
+border:none;
+background:rgba(0,0,0,0.4);
+color:white;
+padding:6px 12px;
+cursor:pointer;
+border-radius:6px;
+}
+
+
+
 #top-bar {
   padding: 1.1vh 2.3vw 2.7vh 0.7vw;
   background: var(--nav);
@@ -79,6 +236,25 @@ body.page-blank {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  background: #6798c0;
+  position: relative;
+  left: -1.7vw;
+
+  /* fade edges */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
 }
 
 .logo {
@@ -133,6 +309,8 @@ h2,
 h3 {
   font-family: "Inter", sans-serif;
   border-left: 7px double var(--border);
+  font-family: "Inter", cursive;
+  border-left: 7px double #ffba08;
   padding-left: 1.4vw;
   margin-top: 4.6vh;
   margin-bottom: 1.7vh;
@@ -236,6 +414,59 @@ p {
   letter-spacing: 0.06em;
 }
 
+.testimonials {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.truck-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.nav a{
+  text-decoration:none;
+  color:black;
+  padding:5px 10px;
+  position:relative;
+}
+
+.nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-3px;
+  width:0%;
+  height:2px;
+  background:#ff6600;
+  transition:width 0.3s ease;
+}
+
+.nav a:hover::after{
+  width:100%;
+}
+
+.today-trucks {
+  margin: 3rem auto;
+  max-width: 900px;
+}
+
+.schedule li{
+  margin:5px 0;
+}
+
+.testimonial {
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-left: 4px solid #00eaff;
+  border-radius: 8px;
+  max-width: 350px;
+}
+
 .stats {
   list-style-type: decimal-leading-zero;
   margin-left: 2vw;
@@ -244,6 +475,12 @@ p {
   padding: 1.4vh 1.7vw;
   font-family: "Inter", sans-serif;
   color: var(--text);
+  margin-left: 3vw;
+  background-color: #b3d1ff;
+  border: 3px groove #b3d1ff;
+  padding: 1.4vh 1.7vw;
+  font-family: "Inter";
+  color: #003049;
   position: relative;
   left: 2vw;
   text-indent: 1.2vw;
@@ -267,6 +504,8 @@ p {
 
 .page-image--home img {
   max-width: 60vw;
+  position: relative;
+  /*transform: rotate(4deg);*/
 }
 
 .page-image--services {
@@ -321,6 +560,12 @@ p {
   margin-top: -1vh;
   width: 350px;
   height: 200px;
+  border: 4px ridge #66deff;
+  padding: 8px;
+  margin-top: -1.1vh;
+  margin-left: 15vw;
+  background-color: #e0fbfc;
+  font-family: "Open Sans", sans-serif;
   position: relative;
 }
 
@@ -345,6 +590,14 @@ button {
   cursor: pointer;
   font-family: "Inter", sans-serif;
   margin-left: 0;
+  background-color: #788efd;
+  color: #000000;
+  border: 3px outset #1f3c88;
+  padding: 0.9vh 1.9vw;
+  cursor: pointer;
+  font-family: "Pacifico", cursive;
+  margin-left: 7.2vw;
+  /*transform: rotate(-2deg);*/
 }
 
 button:hover {
@@ -414,4 +667,28 @@ button:hover {
   text-align: center;
   position: relative;
   right: -2vw;
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+  background-color: #3e7cb1;
+  padding: 1.4vh 1.7vw;
+  border-top: 5px solid  rgb(0, 234, 255);
+  text-align: center;
+  position: relative;
+  right: -5.3vw;
+
+  /* fade edges */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
 }
