@@ -7,6 +7,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap");
 
 :root {
   --bg: #e8f4ff;
@@ -22,15 +23,15 @@
 }
 
 .dark {
-  --bg: #000000;
-  --text: #ffffff;
-  --panel: #111111;
-  --nav: #7fffd4;
-  --nav-text: #ffffff;
-  --accent: #000000;
+  --bg: #1a2230;
+  --text: #f2f6fb;
+  --panel: #243042;
+  --nav: #7f97b0;
+  --nav-text: #f6f9fd;
+  --accent: #d3dfeb;
   --accent-text: #ffffff;
-  --border: #7fffd4;
-  --input: #0a0a0a;
+  --border: #95abc1;
+  --input: #1f2a3a;
   --input-text: #ffffff;
 }
 
@@ -38,8 +39,11 @@ body {
   font-family: "Inter", sans-serif;
   background: var(--bg);
   color: var(--text);
+  font-weight: 500;
   margin: 2vh 2vw 5vh 3vw;
   text-align: left;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 body.page-home {
@@ -82,15 +86,13 @@ body.page-blank {
 }
 
 .logo {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 0.22em;
   color: var(--accent);
-  text-shadow:
-    2px 2px 0 var(--accent),
-    -2px 0 0 var(--nav);
+  text-shadow: none;
   margin: 0 2vw 0.9vh 0;
   position: relative;
   top: 0.6vh;
@@ -118,6 +120,8 @@ body.page-blank {
   text-decoration: none;
   color: var(--nav-text);
   background-color: var(--accent);
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
   padding: 0.4vh 0.8vw;
   border-radius: 10px;
 }
@@ -131,7 +135,8 @@ body.page-blank {
 h1,
 h2,
 h3 {
-  font-family: "Inter", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
   border-left: 7px double var(--border);
   padding-left: 1.4vw;
   margin-top: 4.6vh;
@@ -141,6 +146,8 @@ h3 {
 }
 
 .title-main {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
   font-size: 4.1vw;
   text-transform: none;
   background-color: var(--nav);
@@ -151,6 +158,8 @@ h3 {
 }
 
 .section-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
   background-color: var(--nav);
   color: var(--accent);
   text-align: left;
@@ -210,10 +219,11 @@ p {
 
 .stats {
   list-style-type: decimal-leading-zero;
+  list-style-position: inside;
   margin-left: 2vw;
   background-color: var(--panel);
   border: 3px groove var(--nav);
-  padding: 1.4vh 1.7vw;
+  padding: 1.4vh 1.7vw 1.4vh 2.6vw;
   font-family: "Inter", sans-serif;
   color: var(--text);
   position: relative;
@@ -252,7 +262,7 @@ p {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: stretch;
 }
 
 .home-form {
@@ -266,14 +276,18 @@ p {
 }
 
 .page-image--contact {
-  flex: 0 0 360px;
-  max-width: 100%;
+  flex: 1 1 420px;
+  min-width: 320px;
+  max-width: 520px;
+  margin: 0;
+  display: flex;
 }
 
 .page-image--contact img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
+  object-fit: cover;
 }
 
 input,
@@ -353,6 +367,27 @@ button:hover {
 
 .switch input:checked + .slider:before {
   transform: translateX(20px);
+}
+
+.dark .nav a {
+  background-color: #5d728b;
+  color: #f6f9fd;
+}
+
+.dark .nav a:hover {
+  background-color: #4b6078;
+  color: #f6f9fd;
+  border: 2px solid #95abc1;
+}
+
+.dark button {
+  background-color: #5d728b;
+  color: #f6f9fd;
+}
+
+.dark button:hover {
+  background-color: #4b6078;
+  color: #f6f9fd;
 }
 
 #footer-text {
