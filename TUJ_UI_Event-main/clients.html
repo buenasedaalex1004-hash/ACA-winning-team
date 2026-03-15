@@ -89,3 +89,98 @@
   </script>
 </body>
 </html>
+<head>
+<meta charset="utf-8">
+<title>Clients - HackathonCorp</title>
+<link rel="stylesheet" href="./css/styles.css">
+
+
+</head>
+
+<body class="page-clients">
+
+<div id="top-bar">
+<div class="logo">HackathonCorp</div>
+
+<ul class="nav">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services??</a></li>
+<li><a href="clients.html">Clients!!!</a></li>
+<li><a href="contact.html">Contact Form</a></li>
+<li><a href="blank.html">Blank</a></li>
+</ul>
+</div>
+
+
+<section class="partners">
+
+<h2>Our Partner Universities</h2>
+
+<div class="partner-slider">
+
+<button class="slide-btn" onclick="moveLeft()">&#10094;</button>
+
+<div class="slider-window">
+
+<div class="partner-cards" id="cardTrack">
+
+<div class="partner-card active">
+<img src="C:\Users\User\Downloads\tuj-logo.jpg" alt="TUJ">
+<h3>Temple University Japan</h3>
+<p>Hosted AI and robotics hackathons.</p>
+</div>
+
+<div class="partner-card">
+<img src="C:\Users\User\Downloads\standford.png" alt="Stanford">
+<h3>Stanford University</h3>
+<p>Startup and innovation hackathons.</p>
+</div>
+
+<div class="partner-card">
+<img src="C:\Users\User\Downloads\MIT-logo.webp" alt="MIT">
+<h3>MIT</h3>
+<p>Data science competitions.</p>
+</div>
+
+</div>
+
+</div>
+
+<button class="slide-btn" onclick="moveRight()">&#10095;</button>
+
+</div>
+
+</section>
+
+
+<script>
+
+let track = document.getElementById("cardTrack")
+let cards = document.querySelectorAll(".partner-card")
+let index = 0
+
+function updateActive(){
+cards = document.querySelectorAll(".partner-card")
+cards.forEach(c=>c.classList.remove("active"))
+cards[1].classList.add("active")
+}
+
+function moveRight(){
+
+track.appendChild(track.firstElementChild)
+updateActive()
+
+}
+
+function moveLeft(){
+
+track.prepend(track.lastElementChild)
+updateActive()
+
+}
+
+</script>
+
+</body>
+</html>
