@@ -5,6 +5,11 @@
     <title>Contact - CampusBites</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
+  <style>
+    textarea{
+      resize: none;
+    }
+  </style>
   <body class="page-contact">
     <div id="top-bar">
       <div class="logo">CampusBites</div>
@@ -74,7 +79,36 @@
           alt="Professional food truck service setup for campus catering"
         />
       </div>
-    </div>
+      <p>
+        <label>
+          Your name:
+          <input type="text" name="name" />
+        </label>
+      </p>
+      <p>
+        <label>
+          Company:
+          <input type="text" name="company" />
+        </label>
+      </p>
+      <p>
+        <label>
+          Work email:
+          <input type="email" name="email" />
+        </label>
+      </p>
+      <p>
+        <label>
+          Message:
+          <textarea name="message" rows="5"></textarea>
+        </label>
+      </p>
+      <p>
+        <button type="submit">Send message to CampusBites</button>
+      </p>
+    </form>
+/*delete this form above*/
+    
 
     </main>
 
