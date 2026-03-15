@@ -71,7 +71,6 @@ body.page-blank {
 }
 
 #top-bar {
-  border-bottom: 4px dashed #ff4d6d;
   padding: 1.1vh 2.3vw 2.7vh 0.7vw;
   background: linear-gradient(90deg, #ff9e00, #ff4d6d, #ffccd5);
   box-shadow: 0 0 0 4px #00bbf9;
@@ -106,8 +105,8 @@ body.page-blank {
   transform: skewX(-14deg);
 }
 
-.nav a {
-  text-decoration: underline wavy #ff006e;
+.nav a {  
+  text-decoration: none;
   color: #1d3557;
   background-color: #caffbf;
   padding: 0.4vh 0.8vw;
@@ -153,11 +152,38 @@ h3 {
   top: -1.9vh;
 }
 
+.section-menutxtblock {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1vw;
+  max-width: 63vw;
+  line-height: 1.37;
+  padding-right: 1.9vw;
+  color: #2b2d42;
+  margin-left: 4.4vw;
+  text-align: justify;
+  text-indent: 2.7vw;
+  word-spacing: 0.28em;
+}
+
+.section-menudescription {
+  list-style-type:circle;
+  margin: 2vh 0 2vh 4.4vw;
+  background-color: #e5ffd8;
+  border: 3px groove #2ec4b6;
+  padding: 1.4vh 1.7vw;
+  font-family: "Fira Sans", sans-serif;
+  color: #003049;
+  position: relative;
+  float: left;
+  width: 300px;
+  height: 200px;
+  text-indent: 0.9vw;
+}
+
 p {
   font-family: "Open Sans", sans-serif;
   max-width: 63vw;
   line-height: 1.37;
-  border-right: 2px dashed #3a86ff;
   padding-right: 1.9vw;
   color: #2b2d42;
   margin-left: 4.4vw;
@@ -239,8 +265,9 @@ p {
 }
 
 .page-image--contact img {
-  max-width: 55vw;
-  transform: rotate(5deg);
+  max-width: 25vw;
+  position: absolute;
+  float: right;
 }
 
 .home-form {
@@ -250,6 +277,19 @@ p {
   margin-left: 1vw;
   background-color: #e0fbfc;
   font-family: "Open Sans", sans-serif;
+  position: relative;
+}
+
+.page-menutxt {
+  font-family: "Pacifico", cursive;
+  font-size: 2.7vw;
+  color: #ff4d6d;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1.4vh 1.7vw;
+  border: 3px double #ff006e;
+  margin-top: -1vh;
+  width: 350px;
+  height: 200px;
   position: relative;
 }
 
@@ -270,9 +310,8 @@ button {
   border: 3px outset #1f3c88;
   padding: 0.9vh 1.9vw;
   cursor: pointer;
-  font-family: "Pacifico", cursive;
+  font-family: "Oswald";
   margin-left: 7.2vw;
-  transform: rotate(-2deg);
 }
 
 button:hover {
