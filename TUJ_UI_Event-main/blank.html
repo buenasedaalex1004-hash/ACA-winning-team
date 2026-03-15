@@ -2,20 +2,77 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Blank- HackathonCorp</title>
+    <title>Menu- CampusBites</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body class="page-blank">
     <div id="top-bar">
-      <div class="logo">HackathonCorp</div>
+      <div class="logo">CampusBites</div>
       <ul class="nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services??</a></li>
-        <li><a href="clients.html">Clients!!!</a></li>
+        <li><a href="services.html">Schedule/Services</a></li>
+        <li><a href="clients.html">Partnered Universities</a></li>
         <li><a href="contact.html">Contact Form</a></li>
-        <li><a href="blank.html">Blank</a></li>
+        <li><a href="blank.html">Menu</a></li>
+        <li class="dark-mode-toggle">
+          <label class="switch">
+            <input id="dark-mode-toggle" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </li>
       </ul>
     </div>
-  </body>
+
+    <h1>FoodTruck Menu</h1>
+
+    <ul class="section-menudescription">
+      <p class="section-menutxtblock">
+        Burger Truck
+      </p>
+      <label for="burger-menu">Select a burger:</label>
+      <li>Classic Burger - $8.99</li>
+      <li>Cheese Burger - $9.99</li>
+      <li>Veggie Burger - $7.99</li>
+      <li>Fries - $3.99</li>
+    </ul>
+
+    <ul class="section-menudescription">
+      <p class="section-menutxtblock">
+        Taco Truck
+      </p>
+      <label for="taco-menu">Select a taco:</label>
+      <li>Beef Taco - $2.99</li>
+      <li>Chicken Taco - $3.99</li>
+      <li>Veggie Taco - $2.99</li>
+      <li>Fries - $3.99</li>
+    </ul>
+
+    <ul class="section-menudescription">
+      <p class="section-menutxtblock">
+        Noodles Truck
+      </p>
+      <label for="noodles-menu">Select a noodle dish:</label>
+      <li>Beef Noodles - $8.99</li>
+      <li>Chicken Noodles - $7.99</li>
+      <li>Veggie Noodles - $6.99</li>
+      <li>Fries - $3.99</li>
+    </ul>
+    
+  <script>
+    (function () {
+      const toggle = document.getElementById('dark-mode-toggle');
+      if (!toggle) return;
+      const apply = (on) => document.body.classList.toggle('dark', on);
+      const saved = localStorage.getItem('darkMode');
+      const initial = saved === 'true';
+      toggle.checked = initial;
+      apply(initial);
+      toggle.addEventListener('change', () => {
+        apply(toggle.checked);
+        localStorage.setItem('darkMode', toggle.checked);
+      });
+    })();
+  </script>
+</body>
 </html>
