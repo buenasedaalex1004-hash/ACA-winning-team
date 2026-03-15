@@ -23,7 +23,7 @@ body {
 }
 
 body.page-home {
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  background: #020617;
 }
 
 body.page-about {
@@ -90,7 +90,7 @@ body.page-blank {
   top: 50%;
   transform: translateY(-50%);
   background: rgba(84, 141, 201, 0.5);
-  color: white;
+  color: rgb(0, 234, 255);
   border: none;
   font-size: 30px;
   padding: 10px;
@@ -109,14 +109,144 @@ body.page-blank {
   background: rgba(56, 111, 174, 0.8);
 }
 
+h1 {
+  text-align: left;
+  margin-top: 3rem;
+}
+
+.today-trucks {
+  margin: 3rem auto;
+  max-width: 900px;
+}
+
+.truck-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.truck-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+  text-align: left;
+}
+
+.weekly-schedule {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.schedule-image {
+  max-width: 700px;
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.partners{
+text-align:center;
+margin-top:4rem;
+}
+
+.partner-slider{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:25px;
+margin-top: 40px;
+}
+
+.slider-window{
+width:900px;
+overflow:hidden;
+margin: auto;
+}
+
+.slide-btn{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+
+font-size:28px;
+border:none;
+background:rgba(0,0,0,0.4);
+color:white;
+padding:8px 14px;
+cursor:pointer;
+border-radius:6px;
+}
+
+.slide-btn:first-of-type{
+left:-60px;
+}
+
+.slide-btn:last-of-type{
+right:60px;
+}
+
+.partner-cards{
+display:flex;
+transition:transform 0.4s ease;
+}
+
+.partner-card{
+background:white;
+padding:2.5rem;
+border-radius:14px;
+width:280px;
+margin:0 15px;
+opacity:0.5;
+transform:scale(0.9);
+transition:0.3s;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.partner-card.active{
+opacity:1;
+transform:scale(1.0);
+}
+
+.partner-card img{
+width:90px;
+margin-bottom:1rem;
+}
+
+.slide-btn{
+font-size:28px;
+border:none;
+background:rgba(0,0,0,0.4);
+color:white;
+padding:6px 12px;
+cursor:pointer;
+border-radius:6px;
+}
+
+
 
 #top-bar {
-  border-bottom: 4px dashed #ff4d6d;
   padding: 1.1vh 2.3vw 2.7vh 0.7vw;
-  background: linear-gradient(90deg, #ff9e00, #ff4d6d, #ffccd5);
-  box-shadow: 0 0 0 4px #00bbf9;
+  background: #6798c0;
   position: relative;
   left: -1.7vw;
+
+  /* fade edges */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
 }
 
 .logo {
@@ -233,13 +363,66 @@ p {
   letter-spacing: 0.06em;
 }
 
+.testimonials {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.truck-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.nav a{
+  text-decoration:none;
+  color:black;
+  padding:5px 10px;
+  position:relative;
+}
+
+.nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-3px;
+  width:0%;
+  height:2px;
+  background:#ff6600;
+  transition:width 0.3s ease;
+}
+
+.nav a:hover::after{
+  width:100%;
+}
+
+.today-trucks {
+  margin: 3rem auto;
+  max-width: 900px;
+}
+
+.schedule li{
+  margin:5px 0;
+}
+
+.testimonial {
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-left: 4px solid #00eaff;
+  border-radius: 8px;
+  max-width: 350px;
+}
+
 .stats {
   list-style-type: decimal-leading-zero;
   margin-left: 3vw;
-  background-color: #e5ffd8;
-  border: 3px groove #2ec4b6;
+  background-color: #b3d1ff;
+  border: 3px groove #b3d1ff;
   padding: 1.4vh 1.7vw;
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Inter";
   color: #003049;
   position: relative;
   left: 4.2vw;
@@ -264,7 +447,8 @@ p {
 
 .page-image--home img {
   max-width: 60vw;
-  transform: rotate(4deg);
+  position: relative;
+  /*transform: rotate(4deg);*/
 }
 
 .page-image--services {
@@ -284,7 +468,7 @@ p {
 }
 
 .home-form {
-  border: 4px ridge #ff66ff;
+  border: 4px ridge #66deff;
   padding: 8px;
   margin-top: -1.1vh;
   margin-left: 15vw;
@@ -306,8 +490,8 @@ textarea {
 }
 
 button {
-  background-color: #ff5400;
-  color: #001219;
+  background-color: #788efd;
+  color: #000000;
   border: 3px outset #1f3c88;
   padding: 0.9vh 1.9vw;
   cursor: pointer;
@@ -325,11 +509,27 @@ button:hover {
   margin-top: 7vh;
   font-size: 1.3vw;
   font-family: "Raleway", sans-serif;
-  color: #4a4e69;
-  background-color: rgba(255, 255, 255, 0.9);
+  color: #ffffff;
+  background-color: #3e7cb1;
   padding: 1.4vh 1.7vw;
-  border-top: 5px solid #ff006e;
+  border-top: 5px solid  rgb(0, 234, 255);
   text-align: center;
   position: relative;
   right: -5.3vw;
+
+  /* fade edges */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
 }
