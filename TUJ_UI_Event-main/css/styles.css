@@ -70,7 +70,7 @@ body.page-blank {
   );
 }
 
-body.page-image--home
+.page-image--home
 {
   position: relative;
   width: 100%;
@@ -78,14 +78,14 @@ body.page-image--home
   margin: auto;
 }
 
-page-image--home img
+.page-image--home img
 {
   width: 100%;
   border-radius: 20px;
   font: Inter;
 }
 
-body.slider-btn {
+.slider-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
