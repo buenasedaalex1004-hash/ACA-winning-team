@@ -166,6 +166,34 @@ h3 {
   top: -1.9vh;
 }
 
+.section-menutxtblock {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1vw;
+  max-width: 63vw;
+  line-height: 1.37;
+  padding-right: 1.9vw;
+  color: #2b2d42;
+  margin-left: 4.4vw;
+  text-align: justify;
+  text-indent: 2.7vw;
+  word-spacing: 0.28em;
+}
+
+.section-menudescription {
+  list-style-type:circle;
+  margin: 2vh 0 2vh 4.4vw;
+  background-color: #e5ffd8;
+  border: 3px groove #2ec4b6;
+  padding: 1.4vh 1.7vw;
+  font-family: "Fira Sans", sans-serif;
+  color: #003049;
+  position: relative;
+  float: left;
+  width: 300px;
+  height: 200px;
+  text-indent: 0.9vw;
+}
+
 p {
   font-family: "Inter", sans-serif;
   max-width: 75vw;
@@ -255,6 +283,13 @@ p {
   align-items: flex-start;
 }
 
+.page-image--contact img {
+  max-width: 25vw;
+  position: absolute;
+  float: right;
+  margin-left: 750px;
+}
+
 .home-form {
   border: 4px ridge var(--nav);
   padding: 16px;
@@ -274,6 +309,19 @@ p {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.page-menutxt {
+  font-family: "Pacifico", cursive;
+  font-size: 2.7vw;
+  color: #ff4d6d;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1.4vh 1.7vw;
+  border: 3px double #ff006e;
+  margin-top: -1vh;
+  width: 350px;
+  height: 200px;
+  position: relative;
 }
 
 input,

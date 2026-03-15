@@ -5,6 +5,11 @@
     <title>Contact - CampusBites</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
+  <style>
+    textarea{
+      resize: none;
+    }
+  </style>
   <body class="page-contact">
     <div id="top-bar">
       <div class="logo">CampusBites</div>
@@ -32,44 +37,43 @@
       the best bites on campus.
     </p>
 
-    <div class="contact-grid">
-      <form class="home-form">
-        <p>
-          <label>
-            Your name:
-            <input type="text" name="name" />
-          </label>
-        </p>
-        <p>
-          <label>
-            Company:
-            <input type="text" name="company" />
-          </label>
-        </p>
-        <p>
-          <label>
-            Work email:
-            <input type="email" name="email" />
-          </label>
-        </p>
-        <p>
-          <label>
-            Message:
-            <textarea name="message" rows="5"></textarea>
-          </label>
-        </p>
-        <p>
-          <button type="submit">Send message to CampusBites</button>
-        </p>
-      </form>
-
+    <form class="home-form">
       <div class="page-image page-image--contact">
         <img
           src="https://thumbs.dreamstime.com/b/black-guy-showing-white-empty-smartphone-screen-closeup-great-offer-portrait-excited-man-standing-outdoors-holding-big-phone-345709111.jpg"
           alt="CampusBites contact phone placeholder image"
         />
       </div>
-    </div>
+      <p>
+        <label>
+          Your name:
+          <input type="text" name="name" />
+        </label>
+      </p>
+      <p>
+        <label>
+          Company:
+          <input type="text" name="company" />
+        </label>
+      </p>
+      <p>
+        <label>
+          Work email:
+          <input type="email" name="email" />
+        </label>
+      </p>
+      <p>
+        <label>
+          Message:
+          <textarea name="message" rows="5"></textarea>
+        </label>
+      </p>
+      <p>
+        <button type="submit">Send message to CampusBites</button>
+      </p>
+    </form>
+
+    
 
     <p id="footer-text">
       © 2026 CampusBites. Helping students find the best bites on campus.
