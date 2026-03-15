@@ -245,13 +245,12 @@ p {
 
 .home-form {
   border: 4px ridge #ff66ff;
-  padding: 8px;
-  margin-top: -1.1vh;
-  margin-left: 15vw;
+  padding: 4px;
+  margin-top: 1vh;
+  margin-left: 1vw;
   background-color: #e0fbfc;
   font-family: "Open Sans", sans-serif;
   position: relative;
-  top: -2.6vh;
 }
 
 input,
