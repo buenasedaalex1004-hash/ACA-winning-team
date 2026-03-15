@@ -2,17 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Menu- HackathonCorp</title>
+    <title>Menu- CampusBites</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body class="page-blank">
     <div id="top-bar">
-      <div class="logo">HackathonCorp</div>
+      <div class="logo">CampusBites</div>
       <ul class="nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services??</a></li>
-        <li><a href="clients.html">Clients!!!</a></li>
+        <li><a href="services.html">Schedule/Services</a></li>
+        <li><a href="clients.html">Partnered Universities</a></li>
         <li><a href="contact.html">Contact Form</a></li>
         <li><a href="blank.html">Menu</a></li>
       </ul>
@@ -53,4 +53,28 @@
       <li>Fries - $3.99</li>
     </ul>
   </body>
+        <li class="dark-mode-toggle">
+          <label class="switch">
+            <input id="dark-mode-toggle" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </li>
+      </ul>
+    </div>
+  <script>
+    (function () {
+      const toggle = document.getElementById('dark-mode-toggle');
+      if (!toggle) return;
+      const apply = (on) => document.body.classList.toggle('dark', on);
+      const saved = localStorage.getItem('darkMode');
+      const initial = saved === 'true';
+      toggle.checked = initial;
+      apply(initial);
+      toggle.addEventListener('change', () => {
+        apply(toggle.checked);
+        localStorage.setItem('darkMode', toggle.checked);
+      });
+    })();
+  </script>
+</body>
 </html>
